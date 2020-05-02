@@ -1,0 +1,26 @@
+GET http://localhost:3000/api/meals
+
+###
+
+POST http://localhost:3000/api/meals
+Content-Type: application/json
+
+{
+  "name": "Papas a la francesa",
+  "desc":"salsa catsup y aderezo"
+}
+
+###
+GET http://localhost:3000/api/meals/5eadd6311603d62a09c89430
+
+###
+PUT http://localhost:3000/api/meals/5eadd4fd1603d62a09c8942f
+Content-Type: application/json
+
+{
+  "name": "Pizza",
+  "desc":"Peperoni y extra queso"
+}
+###
+
+DELETE http://localhost:3000/api/meals/5eadd6311603d62a09c89430
