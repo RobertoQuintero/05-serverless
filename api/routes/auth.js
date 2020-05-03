@@ -43,7 +43,7 @@ router.post('/login', (req, res) => {
         return res.send('Usuario y/o contraseña incorrecta')
       }
       crypto.pbkdf2(password, user.salt, 1000, 64, 'sha1', (err, key) => {
-        const encryptedPassword = key.toString()//desencriptando la contraseña
+        const encryptedPassword = key.toString('base64')//desencriptando la contraseña
         if (user.password === encryptedPassword) {
           const token = signToken(user._id)
           return res.send({ token })
