@@ -24,3 +24,7 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:3000/api/meals/5eadd6311603d62a09c89430
+
+###
+
+POST http://localhost:3000/api/orders
